@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Игра</title>
+
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Find an object in space</h1>
+
+<div class="sunsistem">
+	<img src="images/wallpaper.jpg">
+</div>
+
+<span class="planeti" >
+	<img id="astronaut" src="images/astronaut.png" width="120" height="120">
+	<img id="comet" src="images/comet.png" width="120" height="120">
+	<img id="planet" src="images/planet.png" width="120" height="120">
+	<img id="spaceship" src="images/spaceship.png" width="120" height="120">
+	<img id="star" src="images/star.png" width="120" height="120">
+	<img id="alien" src="images/alien.png" width="120" height="120">
+	<img id="blackhole" src="images/blackhole.png" width="120" height="120">
+	<img id="blueplanet" src="images/blueplanet.png" width="120" height="120">
+	<img id="helmet" src="images/helmet.png" width="120" height="120">
+	<img id="moon" src="images/moon.png" width="120" height="120">
+	<img id="nasa" src="images/nasa.png" width="140" height="120">
+	<img id="saturn" src="images/saturn.png" width="150" height="120">
+	<img id="spacestation" src="images/spacestation.png" width="140" height="120">
+	<img id="sun" src="images/sun.png" width="120" height="120">
+	<img id="UFO" src="images/UFO.png" width="120" height="120">
+	
+</span>
+
+<span id="message"></span>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+"use strict";
+
+const MASSIV = [
+	"astronaut",
+	"comet",
+	"planet",
+	"spaceship",
+	"star",
+	"alien",
+	"blackhole",
+	"blueplanet",
+	"helmet",
+	"moon",
+	"nasa",
+	"saturn",
+	"spacestation",
+	"sun",
+	"UFO"
+];
+
+// https://stackoverflow.com/a/2450976
+const shuffle = array => {
+	let currentIndex = array.length, randomIndex;
+
+	// While there remain elements to shuffle.
+	while (currentIndex !== 0) {
+
+		// Pick a remaining element.
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [
+		array[randomIndex], array[currentIndex]];
+		}
+
+	return array;
+}
+
+const shuffledObjects = shuffle(MASSIV);
+let currentIndex = 0;
+
+const addEventListener = () => {
+	if (currentIndex >= shuffledObjects.length) {
+		document.getElementById("message").innerText = "You completed the game!";
+		return;
+		}
+
+	document.getElementById("message").innerText = "Find an item " + shuffledObjects[currentIndex];
+
+	document.getElementById(shuffledObjects[currentIndex]).addEventListener('click', function (event) {
+			event.preventDefault();
+
+			this.style.opacity = '0';
+			this.style.transition = '0.5s';
+
+			++currentIndex;
+
+			addEventListener();
+		});
+};
+
+addEventListener();
+
+</script>

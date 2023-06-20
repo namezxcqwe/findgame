@@ -1,0 +1,122 @@
+.sunsistem {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#astronaut {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 530px 0 0 200px;
+
+}
+
+#comet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 360px 0 0 550px;
+}
+
+#planet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 380px 0 0 130px;
+}
+
+#spaceship {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 160px 0 0 230px;
+}
+
+#star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 200px 0 0 440px;
+}
+
+#alien {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 400px 0 0 870px;
+}
+
+#blackhole {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 660px 0 0 660px;
+}
+
+#blueplanet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 500px 0 0 440px;
+}
+
+#moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 160px 0 0 800px;
+}
+
+#nasa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 500px 0 0 30px;
+}
+
+#saturn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 600px 0 0 350px;
+}
+
+#spacestation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 150px 0 0 660px;
+}
+
+#sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 95px 0 0 75px;
+}
+
+#UFO {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 630px 0 0 900px;
+}
+
+#helmet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 300px 0 0 340px;
+}
+
+#message {
+    position: absolute;
+    font-family: "Times New Roman", Times, serif;
+    background-color: black;
+    color: white;
+    font-size: 20pt;	
+    top: 0;
+    left: 0;
+    margin: 100px 0 0 320px;
+}
